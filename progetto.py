@@ -58,7 +58,6 @@ for i,row in enumerate(df_male['surname']):
             break
 
 
-new = []
 correct_surname = []
 for wrong in wrong_surnames:
     words = str(df_male['surname'][wrong]).split(" ")
@@ -67,11 +66,8 @@ for wrong in wrong_surnames:
         for caracter in words[0]:
             if caracter.isdigit():
                 words[0] = words[0].replace(str(caracter),"")
-        new.append(words)
-    
-    
+        correct_surname.append(words)
     #se >1 togliamo la seconda parola se ci sono numeri
-    
     if len(words)>1:
         for i, word in enumerate(words):
             for char in word:
@@ -82,9 +78,7 @@ for wrong in wrong_surnames:
             #check se tutte le parole hanno len>1: se no toglile
             if len(word)==1:
                 words.remove(word)
-                # word = word.replace(word,"")
-                # words[i] = word
-        correct_surname.append(' '.join(words))
+    correct_surname.append(' '.join(words))
     
 
 #print(df_male[df_male['name']=='Jose'], end="\n\n") 
