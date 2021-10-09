@@ -14,3 +14,8 @@ Install requirements
 ~~~~
 python3 -m pip install -r requirements.txt
 ~~~~
+
+Run project in VENV
+~~~~
+python3 progetto.py
+~~~~
