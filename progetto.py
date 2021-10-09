@@ -12,8 +12,8 @@ df_tennis = pd.read_csv('prj_data/tennis_matches.csv', sep=',', index_col=0)
 #index_col=False indica di non usare la prima colonna come id, ma come dati
 df_male = pd.read_csv('prj_data/male_players.csv', sep=',', index_col=False)
 df_female = pd.read_csv('prj_data/female_players.csv', sep=',', index_col=False) 
-"""
 print(df_tennis.head(), end="\n\n") 
+"""
 print(df_male.head(), end="\n\n") #only name - surname
 print(df_female.head(), end="\n\n") #only name - surname
 
@@ -59,6 +59,7 @@ for i,row in enumerate(df_male['surname']):
 
 
 new = []
+correct_surname = []
 for wrong in wrong_surnames:
     words = str(df_male['surname'][wrong]).split(" ")
     #se è =1 togliamo solo il numero dalla parola.
@@ -70,28 +71,27 @@ for wrong in wrong_surnames:
     
     
     #se >1 togliamo la seconda parola se ci sono numeri
-    correct_surname = []
+    
     if len(words)>1:
-        for word in words:
+        for i, word in enumerate(words):
             for char in word:
                 if char.isdigit():
-                    word = word.replace(str(caracter),"")
+                    word = word.replace(str(char),"")
+                word = word.strip()
+            words[i] = word
             #check se tutte le parole hanno len>1: se no toglile
             if len(word)==1:
-                word = word.replace(word,"")
-            word = word.strip()
-    correct_surname.append(words)
+                words.remove(word)
+                # word = word.replace(word,"")
+                # words[i] = word
+        correct_surname.append(' '.join(words))
     
 
-print(df_male[df_male['name']=='Jose'], end="\n\n") 
+#print(df_male[df_male['name']=='Jose'], end="\n\n") 
 
-print(wrong_names)
 print("Not correct")
 print(wrong_sur)
 print("correct")
 print(correct_surname)
 
 #merge su nome e cognome 
-
-
-#
