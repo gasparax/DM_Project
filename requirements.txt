@@ -1,5 +1,3 @@
-novas
-requests
 sklearn
 pandas
 matplotlib

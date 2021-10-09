@@ -1,4 +1,3 @@
-"""
 import math
 import numpy as np
 import scipy.stats as stats
@@ -7,7 +6,6 @@ from sklearn.decomposition import PCA
 
 from collections import defaultdict
 from scipy.stats.stats import pearsonr
-"""
 import pandas as pd
 
 df_tennis = pd.read_csv('prj_data/tennis_matches.csv', sep=',', index_col=0) 
@@ -42,10 +40,14 @@ wrong_sur = []
 
 #ci sono cifre nei nomi/cognomi?
 for row in df_male['name']:
+    """
     for i,caracter in enumerate(str(row)):
         if str(caracter).isdigit():
             wrong_names.append(str(row))
             break
+    """
+    if str(row).isalpha():
+        wrong_names.append(str(row))
 
 #ci sono cifre nei nomi/cognomi?
 for i,row in enumerate(df_male['surname']):
