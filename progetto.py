@@ -1,13 +1,14 @@
+"""
 import math
 import numpy as np
-import pandas as pd
 import scipy.stats as stats
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 
 from collections import defaultdict
 from scipy.stats.stats import pearsonr
-
+"""
+import pandas as pd
 
 df_tennis = pd.read_csv('prj_data/tennis_matches.csv', sep=',', index_col=0) 
 #index_col=False indica di non usare la prima colonna come id, ma come dati
