@@ -9,10 +9,10 @@ from collections import defaultdict
 from scipy.stats.stats import pearsonr
 
 
-df_tennis = pd.read_csv('tennis_matches.csv', sep=',', index_col=0) 
+df_tennis = pd.read_csv('prj_data/tennis_matches.csv', sep=',', index_col=0) 
 #index_col=False indica di non usare la prima colonna come id, ma come dati
-df_male = pd.read_csv('male_players.csv', sep=',', index_col=False)
-df_female = pd.read_csv('female_players.csv', sep=',', index_col=False) 
+df_male = pd.read_csv('prj_data/male_players.csv', sep=',', index_col=False)
+df_female = pd.read_csv('prj_data/female_players.csv', sep=',', index_col=False) 
 """
 print(df_tennis.head(), end="\n\n") 
 print(df_male.head(), end="\n\n") #only name - surname
