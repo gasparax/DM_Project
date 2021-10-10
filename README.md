@@ -15,7 +15,9 @@ Install requirements
 python3 -m pip install -r requirements.txt
 ~~~~
 
-Run project in VENV
+Launch the Jupyter Nootebook
 ~~~~
-python3 progetto.py
+jupyter-notebook
 ~~~~
+
+Load your notebook and enjoy....
