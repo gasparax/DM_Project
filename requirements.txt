@@ -2,3 +2,6 @@ numpy
 sklearn
 pandas
 matplotlib
+notebook
+jupyterlab
+voila
