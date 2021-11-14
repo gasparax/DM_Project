@@ -2,3 +2,4 @@ venv
 prj_data
 .idea
 .ipynb_checkpoints
+example/

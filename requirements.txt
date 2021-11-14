@@ -6,3 +6,4 @@ notebook
 jupyterlab
 voila
 seaborn
+pyclustering
