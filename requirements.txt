@@ -7,3 +7,4 @@ jupyterlab
 voila
 seaborn
 pyclustering
+tqdm
