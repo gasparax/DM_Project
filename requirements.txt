@@ -9,3 +9,5 @@ seaborn
 pyclustering
 tqdm
 ipynb
+yellowbrick
+ipywidgets
