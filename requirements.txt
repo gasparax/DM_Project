@@ -11,3 +11,7 @@ tqdm
 ipynb
 yellowbrick
 ipywidgets
+pydotplus
+scikit-plot
+wittgenstein
+imblearn
