@@ -16,3 +16,4 @@ scikit-plot
 wittgenstein
 imblearn
 tensorflow
+notebook-as-pdf
