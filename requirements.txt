@@ -17,3 +17,4 @@ wittgenstein
 imblearn
 tensorflow
 notebook-as-pdf
+tslearn
